@@ -8,18 +8,18 @@ stages {
   }
 stage('Build') {
     steps {
-     sh 'mvn compile'
+     sh 'mvn Compile'
     }
   }
 stage('Test') {
     steps {
-     sh 'mvn test'
+     sh 'mvn Test'
     }
   }
 
 stage('Package') {
     steps {
-     sh 'mvn package'
+     sh 'mvn Package'
     }
   }
 
