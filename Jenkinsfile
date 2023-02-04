@@ -16,13 +16,10 @@ stage('Test') {
      sh 'mvn Test'
     }
   }
-
 stage('Package') {
     steps {
      sh 'mvn Package'
     }
   }
-
 }
-
 }
