@@ -1,4 +1,4 @@
-pipleline {
+pipeline {
 agent any
 stages {
   stage('Checkout') {
@@ -6,34 +6,20 @@ stages {
       checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_maven_account', url: 'https://github.com/muntaser4github/-teavm-maven-webapp.git']])
     }
   }
-stage('build') {
+stage('Build') {
     steps {
      sh 'mvn compile'
     }
   }
-stage('test') {
+stage('Test') {
     steps {
      sh 'mvn test'
     }
   }
-stage('build') {
+
+stage('Package') {
     steps {
-     sh 'mvn compile'
-    }
-  }
-stage('test') {
-    steps {
-     sh 'mvn test'
-    }
-  }
-stage('build') {
-    steps {
-     sh 'mvn compile'
-    }
-  }
-stage('package') {
-    steps {
-     sh 'mvn pacjage'
+     sh 'mvn package'
     }
   }
 
