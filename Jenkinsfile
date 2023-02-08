@@ -20,4 +20,3 @@ sh  'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/-teavm-maven-web
     }
   }
 }
-
