@@ -14,7 +14,7 @@ pipeline {
  stage('Deploy') {
       steps {
         ssshagent(['tomcat_server']) {
-sh  'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/blueocean-test-repo_master/target/teavm-maven-webapp-1.1-SNAPSHOT.war ubuntu@ec2-3-112-58-132.ap-northeast-1.compute.amazonaws.com:/opt/apache-tomcat-8.5.85/webapps'
+sh  'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/blueocean-test-repo_master/target/teavm-maven-webapp-1.1-SNAPSHOT.war ubuntu@ 172.31.0.57:/opt/apache-tomcat-8.5.85/webapps'
 }
       }
     }
