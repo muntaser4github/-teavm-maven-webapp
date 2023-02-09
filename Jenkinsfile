@@ -3,7 +3,7 @@ pipeline {
 stages {
         stage('Checkout') { 
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-user', url: 'https://github.com/devopsdeepdive/maven-web-project.git']]]) 
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-user', url: 'https://github.com/muntaser4github/-teavm-maven-webapp.git']]]) 
             }
         }
 		stage('Build') { 
